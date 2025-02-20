@@ -1,0 +1,81 @@
+.wrapper {
+  height: 370px;
+  width: 420px;
+  border-radius: 7px;
+  background: #393939;
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active {
+  height: 610px;
+}
+
+.wrapper form {
+  height: 210px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active form {
+  height: 225px;
+  pointer-events: none;
+}
+
+.wrapper .back {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  width: 20%;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+  margin-bottom: 10px;
+}
+
+form img {
+  display: none;
+  max-width: 148px;
+}
+
+.wrapper.active form img {
+  display: block;
+}
+
+.wrapper.active form .content {
+  display: none;
+}
+
+.wrapper .details {
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+
+.wrapper.active .details {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 25px;
+    height: 360px;
+  }
+  .wrapper.active {
+    height: 610px;
+  }
+}

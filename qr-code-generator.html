@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>QR Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="components/modal/modal.css" />
+    <link rel="stylesheet" href="css/generator.css" />
+    <link rel="stylesheet" href="global.css" />
+
+    <script src="components/modal/modal.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>QR Code Generator</h1>
+        <p>Paste a url or enter text to create QR code</p>
+      </header>
+      <div class="form">
+        <input type="text" spellcheck="false" placeholder="Enter text or url" />
+
+        <div class="btnPos">
+          <button>Generate QR Code</button>
+          <button id="goback">Go Back</button>
+        </div>
+      </div>
+      <div class="qr-code">
+        <img src="" alt="qr-code" />
+        <button class="download-btn">Download QR Code</button>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+    <script src="js/generator.js"></script>
+  </body>
+</html>
+
+<script>
+  let goback = document.getElementById("goback");
+  goback.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+</script>
